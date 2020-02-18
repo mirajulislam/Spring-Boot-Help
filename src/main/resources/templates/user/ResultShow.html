@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8" />
+
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="card">
+
+
+
+            <div class="card-block">
+
+                <table class="table table-hover">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Batch Name</th>
+                            <th>Capacity</th>
+                             <th>Course Name</th>
+                            <th>Day</th>
+                            <th>Faulty Name</th>
+                            <th>Period</th>
+                            <th>Room</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="result :${data}">
+
+                            <td th:text="${result.id}"></td>
+
+                            <td th:text="${result.batchName}"></td>
+
+                            <td th:text="${result.capacity}"></td>
+
+                           <td th:text="${result.courseName}"></td>
+
+                            <td th:text="${result.day}"></td>
+
+                            <td th:text="${result.facultyName}"></td>
+                          <td th:text="${result.period}"></td>
+                         <td th:text="${result.room_no}"></td>
+
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <hr />
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
